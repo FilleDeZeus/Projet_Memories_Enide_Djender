@@ -5,9 +5,9 @@
 //     z-index: -1;
 // }
 
-  * {
-    box-sizing: border-box;
-  }
+  // * {
+  //   box-sizing: border-box;
+  // }
   
   // html {
   //   min-height: 100vh;
@@ -19,6 +19,8 @@
     background: radial-gradient(black 20%, transparent 0%);
     background-color: rgb(39, 38, 38);
     background-size: 13px 13px;
+    //margin-right: 10%;
+    //margin-left: 10%;
   }
   
   .titre {
@@ -32,28 +34,42 @@
   .jeu-info-box {
     grid-column: 1 / -1;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
   }
   
   .jeu-info {
     font-family: corleone, serif;
     color: white;
     font-size: 4em;
+    
   }
   
   .jeu {
-    display: grid;
-    grid-template-columns: repeat(4, auto);
-    grid-gap: 10px;
-    margin: 50px;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     perspective: 500px;
   }
-  
+  .global2{
+    display: flex;
+    flex-wrap: wrap;
+    width: 65%;
+    justify-content: space-around;
+    perspective: 500px;
+  }
+  #global{
+    //display: flex;
+    flex-wrap: wrap;
+    width: 65%;
+    display: none;
+    justify-content: space-around;
+    perspective: 500px;
+  }
   .carte {
     position: relative;
-    height: 175px;
-    width: 125px;
+    height: 131.25px;
+    width: 93.75px;
+    margin: 4%;
   }
 img {
     height: 175px;
@@ -86,11 +102,11 @@ img {
     transform: rotateY(0)
   }
   
-  .carte.matched .carte-value {
+  .matched .card-valeur {
     animation: dance 1s linear infinite 500ms;
   }
   
-  .overlay-text {
+  .alert {
     display: none;
     position: fixed;
     top: 0;
@@ -104,17 +120,17 @@ img {
     font-family: Corleone, serif;
   }
   
-  .overlay-text-small {
+  .alert-small {
     font-size: .3em;
   }
   
-  .overlay-text.visible {
+  .alert.visible {
     display: flex;
     flex-direction: column;
-    animation: overlay-grow 500ms forwards;
+    animation: alert-grow 500ms forwards;
   }
   
-  @keyframes overlay-grow {
+  @keyframes alert-grow {
     from {
       background-color: rgba(0, 0, 0, 0);
       font-size: 0;
@@ -148,12 +164,12 @@ img {
     transform: rotateY(180deg);
   }
   
-  .carte-value {
+  .carte-valeur {
     transition: transform 100ms ease-in-out;
     transform: scale(.9);
   }
   
-  .carte-front:hover .carte-value {
+  .carte-front:hover .carte-valeur {
     transform: scale(1);
   }
   
@@ -178,67 +194,3 @@ img {
       align-items: center;
     }
   }
-  
-  
-  
-  /* Background Styles Only */
-  
-  //@import url('https://fonts.googleapis.com/css?family=Raleway');
-  
-  .side-links {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-  }
-  
-  .side-link {
-    font-family: Raleway;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    margin-bottom: 10px;
-    color: white;
-    width: 180px;
-    padding: 10px 0;
-    border-radius: 10px;
-  }
-  
-  .side-link-youtube {
-    background-color: red;
-  }
-  
-  .side-link-twitter {
-    background-color: #1DA1F2;
-  }
-  
-  .side-link-github {
-    background-color: #6e5494;
-  }
-  
-  .side-link-text {
-    margin-left: 10px;
-    font-size: 18px;
-  }
-  
-  .side-link-icon {
-    color: white;
-    font-size: 30px;
-  }
-
-
-  .lancement{
-    margin-bottom: 3%;
-    width: 300px;
-    display: flex;
-    justify-content: space-between;
-}
-.lancement input{
-    height: 30px;
-    border: 3px solid rgb(26, 14, 194);
-}
-.lancement button{
-    width: 100px;
-    height: 30px;
-    border: 3px solid rgb(26, 14, 194);
-}

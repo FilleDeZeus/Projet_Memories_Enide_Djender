@@ -64,7 +64,6 @@ class Memorie {
             
         }else {
             this.carteMismatch(carte, this.cartesVerif);
-       
         }
         
         this.cartesVerif = null;
@@ -73,10 +72,9 @@ class Memorie {
     carteId(carte1, carte2) {
         this.paire.push(carte1);
         this.paire.push(carte2);
-        // carte1.classList.add('matched');
-        // carte2.classList.add('matched');
-        // carte1.querySelector("img").remove();
-	    // carte2.querySelector("img").remove();
+        carte1.classList.add('matched');
+        carte2.classList.add('matched');
+        console.log(carte1);
         if(this.paire.length === this.tabCartes.length)
             this.victoire();
     }
@@ -112,13 +110,13 @@ if (document.pret == 'loading') {
 }
 
 function pret() {
-    let overlays = Array.from(document.getElementsByClassName('overlay-text'));
+    let alert = Array.from(document.getElementsByClassName('alert'));
     let cartes = Array.from(document.getElementsByClassName('carte'));
     let jeu = new Memorie(100, cartes);
 
-    overlays.forEach(overlay => {
-        overlay.addEventListener('click', () => {
-            overlay.classList.remove('visible');
+    alert.forEach(alert => {
+        alert.addEventListener('click', () => {
+            alert.classList.remove('visible');
             jeu.lancement();
         });
     });
@@ -129,3 +127,17 @@ function pret() {
         });
     });
 }
+
+let selectElement = document.getElementById('game-mode');
+console.log(selectElement);
+let diff = document.getElementById('global');
+console.log(diff);
+
+selectElement.addEventListener('change', function() {
+    let difvalue = selectElement.value;
+    if (difvalue =='normal'){
+        diff.style.display = 'none';
+    }else  {
+        diff.style.display = 'flex';
+    }
+});

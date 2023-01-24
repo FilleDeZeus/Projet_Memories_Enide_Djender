@@ -5,39 +5,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./public/css/app.css">
-</head>
-
-
-    <body>
-
-<head>
     <title>Memory</title>
+    <link rel="stylesheet" href="./public/css/app.css">
 </head>
 
 <body>
     <h1 class="titre">Memory</h1>
-    <div class="overlay-text visible">
+    <div class="alert visible">
         Click to Start
-        
-    </div>
-    <div id="gameOver" class="overlay-text">
-        GAME OVER
-        <span class="overlay-text-small">Click to Restart</span>
-    </div>
-    <div id="victoire" class="overlay-text">
-        VICTOIRE
-        <span class="overlay-text-small">Click to Restart</span>
-    </div>
 
-    <div class="jeu">
-        
-        <div class="jeu-info-box">
-            <select id="game-mode">
-                <option value="normal">Normal</option>
-                <option value="difficult">Difficile</option>
-            </select>
+    </div>
+    <div id="gameOver" class="alert">
+        GAME OVER
+        <span class="alert-small">Click to Restart</span>
+    </div>
+    <div id="victoire" class="alert">
+        VICTOIRE
+        <span class="alert-small">Click to Restart</span>
+    </div>
+    <div class="jeu-info-box">
+        <select id="game-mode">
+            <option  value="normal" selected>Normal</option>
+            <option value="difficult">Difficile</option>
+        </select>
         <div class="jeu-info">
             Time <span id="tpsrestant">100</span>
         </div>
@@ -45,155 +35,196 @@
             Coups <span id="coups">0</span>
         </div>
 
+    </div>
+    <div class="jeu">
+
+    <div class="global2">
+        <div class="carte">
+            <div class="carte-back carte-face">
+                <img class="main" src="./public/img/0.jpg">
+            </div>
+            <div class="carte-front carte-face">
+                <img class="carte-valeur" src="/public/img/1.jpg">
+            </div>
         </div>
 
         <div class="carte">
-        <div class="carte-back carte-face">
-            <img class="main" src="./public/img/0.jpg" >
-        </div>
-        <div class="carte-front carte-face">
-            <img class="carte-valeur" src="/public/img/1.jpg">
-        </div>
+            <div class="carte-back carte-face">
+
+                <img class="main" src="./public/img/0.jpg">
+            </div>
+            <div class="carte-front carte-face">
+                <img class="carte-valeur" src="/public/img/1.jpg">
+            </div>
         </div>
 
         <div class="carte">
-        <div class="carte-back carte-face">
-            
-            <img class="main" src="./public/img/0.jpg">
-        </div>
-        <div class="carte-front carte-face">
-        <img class="carte-valeur" src="/public/img/1.jpg">
-        </div>
+            <div class="carte-back carte-face">
+
+                <img class="main" src="./public/img/0.jpg">
+            </div>
+            <div class="carte-front carte-face">
+                <img class="carte-valeur" src="./public/img/2.jpg">
+            </div>
         </div>
 
         <div class="carte">
-        <div class="carte-back carte-face">
-            
-            <img class="main" src="./public/img/0.jpg">
-        </div>
-        <div class="carte-front carte-face">
-            <img class="carte-valeur" src="./public/img/2.jpg">
-        </div> 
+            <div class="carte-back carte-face">
+                <img class="main" src="./public/img/0.jpg">
+            </div>
+            <div class="carte-front carte-face">
+                <img class="carte-valeur" src="./public/img/2.jpg"></div>
         </div>
 
-        <div class="carte">
-        <div class="carte-back carte-face">
-            <img class="main" src="./public/img/0.jpg">
-        </div>
-        <div class="carte-front carte-face">
-            <img class="carte-valeur" src="./public/img/2.jpg"></div>
-        </div>
+        <div class="carte" >
+            <div class="carte-back carte-face">
 
-        <div class="carte">
-        <div class="carte-back carte-face">
-            
-            <img class="main" src="./public/img/0.jpg">
+                <img class="main" src="./public/img/0.jpg">
 
-        </div>
-        <div class="carte-front carte-face">
-            <img class="carte-valeur" src="./public/img/3.jpg"></div>
+            </div>
+            <div class="carte-front carte-face">
+                <img class="carte-valeur" src="./public/img/3.jpg"></div>
         </div>
         <div class="carte">
-        <div class="carte-back carte-face">
-            
-            <img class="main" src="./public/img/0.jpg">
+            <div class="carte-back carte-face">
 
-        </div>
-        <div class="carte-front carte-face">
-            <img class="carte-valeur" src="./public/img/3.jpg"></div>
-        </div>
-        <div class="carte">
-        <div class="carte-back carte-face">
-            
-                    <img class="main" src="./public/img/0.jpg">
-    </div>
-        <div class="carte-front carte-face">
-            <img class="carte-valeur" src="./public/img/4.jpg"></div>
-        </div>
-        <div class="carte">
-        <div class="carte-back carte-face">
-            
-                    <img class="main" src="./public/img/0.jpg">
-    </div>
-        <div class="carte-front carte-face">
-            <img class="carte-valeur" src="./public/img/4.jpg">
-        </div>
-        </div>
-        <div class="carte">
-        <div class="carte-back carte-face">
-            
-                    <img class="main" src="./public/img/0.jpg">
-    </div>
-        <div class="carte-front carte-face">
-            <img class="carte-valeur" src="./public/img/5.jpg">
-        </div>
-        </div>
-        <div class="carte">
-        <div class="carte-back carte-face">
-            
-                    <img class="main" src="./public/img/0.jpg">
-    </div>
-        <div class="carte-front carte-face">
-            <img class="carte-valeur" src="./public/img/5.jpg">
-        </div>
-        </div>
-        <div class="carte">
-        <div class="carte-back carte-face">
-            
-                    <img class="main" src="./public/img/0.jpg">
-    </div>
-        <div class="carte-front carte-face">
-            <img class="carte-valeur" src="./public/img/6.jpg"></div>
-        </div>
-        <div class="carte">
-        <div class="carte-back carte-face">
-            
-                    <img class="main" src="./public/img/0.jpg">
-    </div>
-        <div class="carte-front carte-face">
-            <img class="carte-valeur" src="./public/img/6.jpg">
-        </div>
-        </div>
-        <div class="carte">
-        <div class="carte-back carte-face">
-            
-                    <img class="main" src="./public/img/0.jpg">
-    </div>
-        <div class="carte-front carte-face">
-            <img class="carte-valeur" src="./public/img/7.jpg"></div>
-        </div>
-        <div class="carte">
-        <div class="carte-back carte-face">
-            
-                    <img class="main" src="./public/img/0.jpg">
-    </div>
-        <div class="carte-front carte-face">
-            <img class="carte-valeur" src="./public/img/7.jpg">
-        </div>
-        </div>
-        <div class="carte">
-        <div class="carte-back carte-face">
-            
-                    <img class="main" src="./public/img/0.jpg">
-    </div>
-        <div class="carte-front carte-face">
-            <img class="carte-valeur" src="./public/img/8.jpg">
-        </div>
-        </div>
-        <div class="carte">
-        <div class="carte-back carte-face">
-                    <img class="main" src="./public/img/0.jpg">
-    </div>
-        <div class="carte-front carte-face">
-            <img class="carte-valeur" src="./public/img/8.jpg">
-        </div>
-        </div>
-    </div>
-    </body>
+                <img class="main" src="./public/img/0.jpg">
 
-    <script src="./public/js/app.js"></script>
-    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
-    <script src="https://kit.fontawesome.com/2fd71013a3.js" crossorigin="anonymous"></script>
-    </body>
+            </div>
+            <div class="carte-front carte-face">
+                <img class="carte-valeur" src="./public/img/3.jpg"></div>
+        </div>
+        <div class="carte " >
+            <div class="carte-back carte-face">
+
+                <img class="main" src="./public/img/0.jpg">
+            </div>
+            <div class="carte-front carte-face ">
+                <img class="carte-valeur" src="./public/img/4.jpg"></div>
+        </div>
+        <div class="carte ">
+            <div class="carte-back carte-face">
+
+                <img class="main" src="./public/img/0.jpg">
+            </div>
+            <div class="carte-front carte-face">
+                <img class="carte-valeur" src="./public/img/4.jpg">
+            </div>
+        </div>
+        <div class="carte " >
+            <div class="carte-back carte-face">
+
+                <img class="main" src="./public/img/0.jpg">
+            </div>
+            <div class="carte-front carte-face ">
+                <img class="carte-valeur" src="./public/img/4.jpg"></div>
+        </div>
+        <div class="carte ">
+            <div class="carte-back carte-face">
+
+                <img class="main" src="./public/img/0.jpg">
+            </div>
+            <div class="carte-front carte-face">
+                <img class="carte-valeur" src="./public/img/4.jpg">
+            </div>
+        </div>
+    </div>
+        
+        <div id="global" ">
+            <div class="carte dif" >
+                <div class="carte-back carte-face">
+    
+                    <img class="main" src="./public/img/0.jpg">
+                </div>
+                <div class="carte-front carte-face">
+                    <img class="carte-valeur" src="./public/img/5.jpg">
+                </div>
+            </div>
+            <div class="carte dif" >
+                <div class="carte-back carte-face">
+    
+                    <img class="main" src="./public/img/0.jpg">
+                </div>
+                <div class="carte-front carte-face">
+                    <img class="carte-valeur" src="./public/img/5.jpg">
+                </div>
+            </div>
+            <div class="carte dif" >
+                <div class="carte-back carte-face">
+    
+                    <img class="main" src="./public/img/0.jpg">
+                </div>
+                <div class="carte-front carte-face">
+                    <img class="carte-valeur" src="./public/img/6.jpg"></div>
+            </div>
+            <div class="carte dif" >
+                <div class="carte-back carte-face">
+    
+                    <img class="main" src="./public/img/0.jpg">
+                </div>
+                <div class="carte-front carte-face">
+                    <img class="carte-valeur" src="./public/img/6.jpg">
+                </div>
+            </div>
+            <div class="carte dif" >
+                <div class="carte-back carte-face">
+    
+                    <img class="main" src="./public/img/0.jpg">
+                </div>
+                <div class="carte-front carte-face">
+                    <img class="carte-valeur" src="./public/img/7.jpg"></div>
+            </div>
+            <div class="carte dif" >
+                <div class="carte-back carte-face">
+    
+                    <img class="main" src="./public/img/0.jpg">
+                </div>
+                <div class="carte-front carte-face">
+                    <img class="carte-valeur" src="./public/img/7.jpg">
+                </div>
+            </div>
+            <div class="carte dif" >
+                <div class="carte-back carte-face">
+    
+                    <img class="main" src="./public/img/0.jpg">
+                </div>
+                <div class="carte-front carte-face">
+                    <img class="carte-valeur" src="./public/img/7.jpg"></div>
+            </div>
+            <div class="carte dif" >
+                <div class="carte-back carte-face">
+    
+                    <img class="main" src="./public/img/0.jpg">
+                </div>
+                <div class="carte-front carte-face">
+                    <img class="carte-valeur" src="./public/img/7.jpg">
+                </div>
+            </div>
+            <div class="carte dif" >
+                <div class="carte-back carte-face">
+    
+                    <img class="main" src="./public/img/0.jpg">
+                </div>
+                <div class="carte-front carte-face">
+                    <img class="carte-valeur" src="./public/img/8.jpg">
+                </div>
+            </div>
+            <div class="carte dif " >
+                <div class="carte-back carte-face">
+                    <img class="main" src="./public/img/0.jpg">
+                </div>
+                <div class="carte-front carte-face">
+                    <img class="carte-valeur" src="./public/img/8.jpg">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script src="./public/js/app.js"></script>
+<script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+<script src="https://kit.fontawesome.com/2fd71013a3.js" crossorigin="anonymous"></script>
+</body>
 
 </html>
